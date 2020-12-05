@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="view_form_demo_sequence" model="ir.ui.view">
+    <field name="name">Demo Sequence Form</field>
+    <field name="model">demo.sequence</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="name"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_tree_demo_sequence" model="ir.ui.view">
+    <field name="name">Demo Sequence List</field>
+    <field name="model">demo.sequence</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+      </tree>
+    </field>
+  </record>
+
+  <data noupdate="0">
+    <record id="demo_scheduler" model="ir.cron">
+      <field name="interval_type">days</field>
+      <field name="name">demo scheduler</field>
+      <field name="numbercall">-1</field>
+      <field name="priority">5</field>
+      <field name="doall">False</field>
+      <field name="active">True</field>
+      <field name="interval_number">1</field>
+      <field name="model_id" ref="model_demo_scheduler"/>
+      <field name="state">code</field>
+      <field name="code">model.action_schedule()</field>
+    </record>
+  </data>
+
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+  <!-- Demo Sequence Menu -->
+  <menuitem id="demo_sequence_menu" name="Demo Sequence" />
+
+  <!-- Action to open the demo_sequence list -->
+  <act_window id="action_demo_sequence" name="Demo Sequence" res_model="demo.sequence" view_mode="tree,form"/>
+
+  <!-- Action to open the demo_sequence list -->
+  <act_window id="action_demo_scheduler" name="Demo Scheduler" res_model="demo.scheduler" view_mode="tree,form"/>
+
+  <!-- Menu item to open the demo_sequence list -->
+  <menuitem id="menu_demo_sequence" name="Demo Sequence" action="action_demo_sequence" parent="demo_sequence_menu" />
+
+  <!-- Menu item to open the demo_sequence list -->
+  <menuitem id="menu_demo_scheduler" name="Demo Scheduler" action="action_demo_scheduler" parent="demo_sequence_menu" />
+</odoo>
+
+
